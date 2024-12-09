@@ -1,0 +1,69 @@
+"""
+Relatório de Debug do Data Manager Pro
+Data: 2024-12-09
+"""
+
+import os
+import glob
+import logging
+
+def read_latest_log():
+    """Lê o arquivo de log mais recente."""
+    log_dir = 'logs'
+    log_files = glob.glob(os.path.join(log_dir, 'app_debug_*.log'))
+    if not log_files:
+        return "Nenhum arquivo de log encontrado."
+        
+    latest_log = max(log_files, key=os.path.getctime)
+    with open(latest_log, 'r', encoding='utf-8') as f:
+        return f.read()
+
+def analyze_log(log_content):
+    """Analisa o conteúdo do log e retorna um relatório."""
+    lines = log_content.split('\n')
+    
+    errors = []
+    warnings = []
+    performance_issues = []
+    
+    for line in lines:
+        if 'ERROR' in line:
+            errors.append(line)
+        elif 'WARNING' in line:
+            warnings.append(line)
+        elif 'Performance Metrics' in line:
+            # Coleta as próximas 3 linhas após as métricas de performance
+            performance_issues.extend(lines[lines.index(line):lines.index(line)+4])
+            
+    return {
+        'errors': errors,
+        'warnings': warnings,
+        'performance': performance_issues
+    }
+
+if __name__ == '__main__':
+    log_content = read_latest_log()
+    analysis = analyze_log(log_content)
+    
+    print("=== Relatório de Debug ===\n")
+    
+    print("Erros Encontrados:")
+    if analysis['errors']:
+        for error in analysis['errors']:
+            print(f"- {error}")
+    else:
+        print("Nenhum erro encontrado.")
+        
+    print("\nAvisos:")
+    if analysis['warnings']:
+        for warning in analysis['warnings']:
+            print(f"- {warning}")
+    else:
+        print("Nenhum aviso encontrado.")
+        
+    print("\nMétricas de Performance:")
+    if analysis['performance']:
+        for metric in analysis['performance']:
+            print(f"- {metric}")
+    else:
+        print("Nenhuma métrica de performance encontrada.")

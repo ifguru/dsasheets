@@ -4,16 +4,29 @@ matplotlib>=3.4.0
 seaborn>=0.11.0
 scikit-learn>=0.24.0
 xgboost>=1.4.0
-gspread>=5.0.0
-google-auth>=2.0.0
-google-auth-oauthlib>=0.4.0
+
+# Google Sheets dependencies
+gspread>=5.12.0
+google-auth>=2.23.0
+google-auth-oauthlib>=1.1.0
+google-api-python-client>=2.108.0
+oauth2client>=4.1.3
+
 python-dotenv>=0.19.0
 pytest>=6.2.0  # for testing
 sphinx>=4.0.0  # for documentation
 
+# Excel support
+openpyxl>=3.1.0
+xlrd>=2.0.1
+
+# Parquet support
+pyarrow>=14.0.1
+
 # Ferramentas de desenvolvimento
-black>=23.0.0  # formatador de código
-isort>=5.12.0  # organizador de imports
-flake8>=6.0.0  # linter
-mypy>=1.5.0   # verificador de tipos
-pre-commit>=3.3.0  # hooks de pre-commit
+black>=21.5b2  # formatador de código
+isort>=5.9.0  # organizador de imports
+flake8>=3.9.0  # linter
+mypy>=0.910   # verificador de tipos
+pre-commit>=2.15.0  # hooks de pre-commit
+psutil>=5.8.0  # Para monitoramento de recursos do sistema
