@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual environments
+venv/
+env/
+.env/
+.venv/
+dsasheets/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+
+# Local development settings
+.env
+
+# Cache directories
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Google API credentials
+*.json
+credentials/
+*-credentials.json
+client_secrets.json
+service-account.json
+panilhatest-*.json
