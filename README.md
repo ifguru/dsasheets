@@ -1,107 +1,148 @@
 # Data Manager Pro
 
-Uma aplicação profissional para análise de dados com integração ao Google Sheets e recursos avançados de Machine Learning.
+<div align="center">
+  <img src="docs/images/logo.png" alt="Data Manager Pro Logo" width="200"/>
+  
+  ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+  ![License](https://img.shields.io/badge/license-MIT-green)
+  [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+</div>
 
-## Características
+## Visão Geral
 
-- Integração com Google Sheets
-- Análise Exploratória de Dados
-- Visualização de Dados
-- Machine Learning Automatizado
-- Salvamento Local e na Nuvem
+Data Manager Pro é uma solução profissional para análise de dados e machine learning, integrando perfeitamente com Google Sheets e oferecendo uma interface gráfica intuitiva. Ideal para cientistas de dados, analistas e profissionais que precisam de uma ferramenta robusta para manipulação e análise de dados.
 
-## Requisitos
+### Principais Recursos
 
-- Python 3.8+
-- Bibliotecas necessárias listadas em `requirements.txt`
-- Credenciais do Google Cloud Platform
+- **Análise Exploratória de Dados (EDA)**
+  - Estatísticas descritivas automatizadas
+  - Visualizações interativas
+  - Detecção de outliers e valores ausentes
+
+- **Machine Learning Integrado**
+  - Modelos de classificação e regressão
+  - Avaliação automática de modelos
+  - Análise de importância de features
+
+- **Integração com Google Sheets**
+  - Sincronização em tempo real
+  - Controle de versão de dados
+  - Colaboração em equipe
+
+- **Interface Gráfica Moderna**
+  - Design responsivo
+  - Temas personalizáveis
+  - Experiência do usuário intuitiva
+
+## Screenshots
+
+<div align="center">
+  <img src="docs/images/dashboard.png" alt="Dashboard" width="600"/>
+  <p><em>Dashboard principal mostrando análise de dados em tempo real</em></p>
+</div>
+
+<div align="center">
+  <img src="docs/images/analysis.png" alt="Análise" width="600"/>
+  <p><em>Visualização detalhada de análises estatísticas</em></p>
+</div>
 
 ## Instalação
 
-1. Clone o repositório:
 ```bash
-git clone [seu-repositorio]
-cd data-manager-pro
-```
+# Clone o repositório
+git clone https://github.com/ifguru/dsasheets.git
 
-2. Instale as dependências:
-```bash
+# Entre no diretório
+cd dsasheets
+
+# Instale as dependências
 pip install -r requirements.txt
-```
 
-3. Configure as credenciais do Google:
-- Coloque seu arquivo de credenciais em `config/credentials.json`
-- Configure as permissões necessárias no Google Cloud Console
-
-## Estrutura do Projeto
-
-```
-data-manager-pro/
-├── src/                    # Código fonte
-│   ├── gui/               # Componentes da interface
-│   ├── analysis/          # Módulos de análise
-│   ├── ml/                # Módulos de Machine Learning
-│   └── utils/             # Utilitários
-├── tests/                 # Testes unitários e de integração
-├── docs/                  # Documentação
-├── config/               # Arquivos de configuração
-└── README.md
-```
-
-## Uso
-
-1. Execute o programa principal:
-```bash
+# Execute o aplicativo
 python src/main.py
 ```
 
-2. Carregue dados:
-   - Via arquivo local
-   - Via Google Sheets
+## Exemplo de Uso
 
-3. Utilize as ferramentas de análise:
-   - Análise Exploratória
-   - Visualização
-   - Machine Learning
+```python
+from src.analysis import DataAnalyzer
+from src.ml import ModelTrainer
 
-## Pipeline de Desenvolvimento
+# Carregue seus dados
+data = DataAnalyzer.load_data("seu_arquivo.csv")
 
-1. **Análise de Dados**
-   - Carregamento de dados
-   - Limpeza e preparação
-   - Análise exploratória
+# Análise exploratória
+analysis = data.get_statistical_summary()
+correlations = data.get_correlation_matrix()
 
-2. **Visualização**
-   - Gráficos estatísticos
-   - Dashboards interativos
-   - Exportação de relatórios
+# Treine um modelo
+model = ModelTrainer(data)
+results = model.train_and_evaluate(target="vendas")
 
-3. **Machine Learning**
-   - Pré-processamento
-   - Treinamento de modelos
-   - Avaliação e métricas
+# Visualize os resultados
+data.plot_insights()
+model.plot_feature_importance()
+```
 
-## Contribuindo
+## Casos de Uso
 
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
+### Análise de Vendas
+```python
+# Carregue dados de vendas do Google Sheets
+vendas_data = DataAnalyzer.from_gsheets("ID_DA_PLANILHA")
+
+# Análise temporal
+vendas_data.analyze_trends(
+    time_column="data",
+    metric="receita",
+    groupby="produto"
+)
+
+# Previsão de vendas futuras
+model = ModelTrainer(vendas_data)
+previsoes = model.forecast_sales(horizon=30)
+```
+
+### Segmentação de Clientes
+```python
+# Análise de comportamento
+clientes = DataAnalyzer.load_data("clientes.csv")
+segmentos = clientes.cluster_analysis(
+    features=["recencia", "frequencia", "valor"],
+    n_clusters=4
+)
+
+# Visualização de segmentos
+clientes.plot_segments(labels=segmentos)
+```
 
 ## Roadmap
 
-- [ ] Implementar mais algoritmos de ML
-- [ ] Adicionar suporte a deep learning
-- [ ] Criar dashboard interativo
-- [ ] Adicionar suporte a mais formatos de arquivo
-- [ ] Implementar processamento em batch
+- [ ] Integração com mais fontes de dados
+- [ ] Dashboards personalizáveis
+- [ ] Modelos de deep learning
+- [ ] API REST
+- [ ] Exportação para múltiplos formatos
+- [ ] Suporte a processamento distribuído
+
+## Autor
+
+**Data Scientist & ML Engineer**
+
+Especialista em análise de dados e machine learning, com foco em soluções práticas e escaláveis para problemas complexos.
+
+### Contato
+
+- **Telegram**: [@bigdsta](https://t.me/bigdsta)
+- **GitHub**: [ifguru](https://github.com/ifguru)
+- **Projeto**: [Data Manager Pro](https://github.com/ifguru/dsasheets)
 
 ## Licença
 
-Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
 
-## Contato
+---
 
-Seu Nome - [@seutwitter](https://twitter.com/seutwitter)
-Link do Projeto: [https://github.com/seu-usuario/data-manager-pro](https://github.com/seu-usuario/data-manager-pro)
+<div align="center">
+  <sub>Built with ❤️ by Data Manager Pro Team</sub>
+</div>
