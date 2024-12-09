@@ -1,5 +1,49 @@
 # Data Manager Pro 📊
 
+<div align="center">
+
+```
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║     ██╗ ██████╗  ██████╗ ██████╗  ██████╗ ███████╗██╗   ██╗███████╗███████╗║
+║     ██║██╔════╝ ██╔═══██╗██╔══██╗██╔═══██╗██╔════╝╚██╗ ██╔╝██╔════╝██╔════╝║
+║     ██║██║  ███╗██║   ██║██████╔╝██║   ██║█████╗   ╚████╔╝ █████╗  ███████╗║
+║     ██║██║   ██║██║   ██║██╔══██╗██║   ██║██╔══╝    ╚██╔╝  ██╔══╝  ╚════██║║
+║     ██║╚██████╔╝╚██████╔╝██║  ██║╚██████╔╝██║        ██║   ███████╗███████║║
+║     ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝        ╚═╝   ╚══════╝╚══════╝║
+║                                                                              ║
+║                           ⚡ IGOROFYESHUA ⚡                                  ║
+║                     Data Science & ML Engineering                            ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+```
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Python-Expert-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Data_Science-Specialist-orange?style=for-the-badge&logo=data:image/png;base64,..." alt="Data Science">
+  <img src="https://img.shields.io/badge/Machine_Learning-Engineer-green?style=for-the-badge&logo=tensorflow&logoColor=white" alt="ML">
+</div>
+
+<p align="center">
+<strong>Data Science & Machine Learning Engineering</strong><br>
+<em>Transformando Dados em Conhecimento</em><br>
+<sub>Building the Future with AI | Python | ML | Deep Learning</sub>
+</p>
+
+<p align="center">
+  <a href="https://github.com/igorjsoares">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+  </a>
+  <a href="https://linkedin.com/in/igorjsoares">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+  <a href="mailto:igor.j.soares@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail">
+  </a>
+</p>
+
+</div>
+
 ## Visão Geral
 Data Manager Pro é uma solução avançada de análise de dados projetada para cientistas de dados e analistas. Com uma interface moderna e intuitiva, o sistema oferece recursos poderosos para manipulação, validação e análise de dados.
 
